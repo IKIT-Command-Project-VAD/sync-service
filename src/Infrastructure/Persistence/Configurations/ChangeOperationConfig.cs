@@ -16,7 +16,7 @@ public class ChangeOperationConfig : IEntityTypeConfiguration<ChangeOperation>
         b.Property(x => x.ItemId).HasColumnName("item_id").HasColumnType("uuid");
         b.Property(x => x.OldValue).HasColumnName("old_value");
         b.Property(x => x.NewValue).HasColumnName("new_value");
-        b.Property(x => x.ClientVersion).HasColumnName("client_version").HasColumnType("uuid");
+        b.Property(x => x.ClientVersion).HasColumnName("client_version");
 
         b.HasOne(x => x.OfflineChangeBatch).WithMany().HasForeignKey(x => x.BatchId);
     }

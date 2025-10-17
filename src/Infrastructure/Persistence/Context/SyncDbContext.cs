@@ -5,7 +5,7 @@ using SyncService.Infrastructure.Persistence.Configurations;
 
 namespace SyncService.Infrastructure.Persistence.Context;
 
-public class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbContext
+public class SyncDbContext(DbContextOptions<SyncDbContext> options) : DbContext(options)
 {
     public DbSet<OfflineChangeBatch> OfflineChangeBatches => Set<OfflineChangeBatch>();
     public DbSet<ChangeOperation> ChangeOperations => Set<ChangeOperation>();
